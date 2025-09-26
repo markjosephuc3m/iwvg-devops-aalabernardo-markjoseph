@@ -33,6 +33,8 @@ public class Searches {
                         .filter(Objects::nonNull)
                         .allMatch(Fraction::isProper))
                 .map(User::getId);
+
+        // BUG FIXING: Supposing I corrected some problem here in Search 5.
     }
 
     //search C
