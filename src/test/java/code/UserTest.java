@@ -1,6 +1,7 @@
 package code;
 
 import es.upm.miw.devops.code.Fraction;
+import es.upm.miw.devops.code.User;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 
@@ -10,7 +11,7 @@ import java.util.List;
 import static org.assertj.core.api.Assertions.assertThat;
 
 public class UserTest {
-    private Fraction.User user;
+    private User user;
     private Fraction fraction1;
     private Fraction fraction2;
 
@@ -18,7 +19,7 @@ public class UserTest {
     void setUp() {
         fraction1 = new Fraction();
         fraction2 = new Fraction();
-        user = new Fraction.User("1", "John", "Doe", new ArrayList<>(List.of(fraction1)));
+        user = new User("1", "John", "Doe", new ArrayList<>(List.of(fraction1)));
     }
 
     @Test
@@ -70,7 +71,7 @@ public class UserTest {
 
     @Test
     void testDefaultConstructor() {
-        Fraction.User defaultUser = new Fraction.User();
+        User defaultUser = new User();
         assertThat(defaultUser.getFractions()).isEmpty();
     }
 }
