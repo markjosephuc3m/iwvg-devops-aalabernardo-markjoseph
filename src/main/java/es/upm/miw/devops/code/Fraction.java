@@ -54,6 +54,10 @@ public class Fraction {
         this.denominator = denominator;
     }
 
+    public double decimal() {
+        return (double) numerator / denominator;
+    }
+
     @Override
     public String toString() {
         return "Fraction{" +
