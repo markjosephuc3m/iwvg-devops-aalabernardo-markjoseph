@@ -34,5 +34,14 @@ public class Searches {
                         .allMatch(Fraction::isProper))
                 .map(User::getId);
     }
+
+    //search C
+    public Stream<Double> findDecimalFractionByUserName(String name) {
+        return new UsersDatabase().findAll()
+                .filter(user -> user.getName().equals(name))
+                .flatMap(user -> user.getFractions().stream())
+                .map(Fraction::decimal);
+    }
+
 }
 
