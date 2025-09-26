@@ -22,5 +22,15 @@ class SearchesTest {
                 .containsExactlyInAnyOrder("1", "2", "3", "5");
     }
 
+    @Test
+    void testFindUserIdByAllProperFraction(){
+        assertThat(new Searches().findUserIdByAllProperFraction().toList())
+                .contains("5");
+    }
+
+
+
+
+
 
 }
